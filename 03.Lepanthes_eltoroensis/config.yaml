@@ -2,7 +2,7 @@
 job: extension
 config:
   # this name will be the folder and filename name
-  name: "Hoffmannseggella_milleri_lora"
+  name: "Lepanthes eltoroensis_lora"
   process:
     - type: 'sd_trainer'
       # root folder to save training sessions/samples/weights
@@ -12,7 +12,7 @@ config:
       device: cuda:0
       # if a trigger word is specified, it will be added to captions of training data if it does not already exist
       # alternatively, in your captions you can add [trigger] and it will be replaced with the trigger word
-      trigger_word: "Hoffmannseggella_milleri"
+      trigger_word: "Lepanthes_eltoroensis"
       network:
         type: "lora"
         linear: 16
@@ -31,7 +31,7 @@ config:
         # images will automatically be resized and bucketed into the resolution specified
         # on windows, escape back slashes with another backslash so
         # "C:\\path\\to\\images\\folder"
-        - folder_path: "/workspace/datasets"
+        - folder_path: "/workspace/datasets/flux-datasets/03.Lepanthes_eltoroensis"
           caption_ext: "txt"
           caption_dropout_rate: 0.05  # will drop out the caption 5% of time
           shuffle_tokens: false  # shuffle caption order, split by commas
